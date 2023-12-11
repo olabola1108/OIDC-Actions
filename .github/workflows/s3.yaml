@@ -10,8 +10,8 @@ permissions:
   contents: read
 
 jobs:
-  call-vpc-workflow:
-    uses: ./.github/workflows/deploy.yaml
+  call-s3-workflow:
+    uses: .github/workflows/deploy.yaml
     with:
       work-dir: "environments/s3"
       aws-region: "us-east-2"
