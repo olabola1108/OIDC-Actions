@@ -1,0 +1,20 @@
+name: s3 Deploy
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  pull-requests: write
+  statuses: write
+  actions: read
+  contents: read
+
+jobs:
+  call-vpc-workflow:
+    uses: ./.github/workflows/deploy.yaml
+    with:
+      work-dir: "environments/s3"
+      aws-region: "us-east-2"
+    secrets:
+      OIDC_ACTIONS: ${{ secrets.CI_ROLE }}
+      SSH_OIDC: ${{ secrets.TERRA_PRIVATE }}

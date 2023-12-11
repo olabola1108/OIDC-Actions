@@ -1,0 +1,5 @@
+.terraform/*
+oidc/
+terra-*
+.history/
+.terraform.lock.hcl
