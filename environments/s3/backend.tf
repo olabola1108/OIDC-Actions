@@ -1,7 +1,7 @@
 module "s3" {
   source = "git@github.com:olabola1108/Semantic-Versioning.git//s3-module?ref=v1.2.1"
   region = "us-east-2"
-  env    = "dev"
+  #env    = "dev"
 }
 
 #Backend configuration
