@@ -17,4 +17,4 @@ jobs:
       aws-region: "us-east-2"
     secrets:
       CI_ROLE: ${{ secrets.CI_ROLE }}
-      SSH_OIDC: ${{ secrets.TERRA_PRIVATE }}
+      TERRA_PRIVATE: ${{ secrets.TERRA_PRIVATE }}

@@ -11,7 +11,7 @@ on:
     secrets:
       CI_ROLE:
         required: true
-      SSH_OIDC:
+      TERRA_PRIVATE:
         required: true
 
 jobs:
