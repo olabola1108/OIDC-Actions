@@ -9,7 +9,7 @@ on:
         required: true
         type: string
     secrets:
-      OIDC_ACTIONS:
+      CI_ROLE:
         required: true
       SSH_OIDC:
         required: true
@@ -22,7 +22,7 @@ jobs:
         working-directory: ${{ inputs.work-dir }}
     steps:
       - name: AWS Creds
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.CI_ROLE }}
           aws-region: ${{ inputs.aws-region }}
